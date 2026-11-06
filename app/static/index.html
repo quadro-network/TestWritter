@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Тесты</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/json.min.js"></script>
+</head>
+<body>
+  <nav class="container-fluid topnav">
+    <ul>
+      <li><strong>Тесты</strong></li>
+    </ul>
+    <ul class="nav-tabs">
+      <li><a href="#" data-view="tests" class="active">Тесты</a></li>
+      <li><a href="#" data-view="prompt">Промпт для ИИ</a></li>
+      <li><a href="#" data-view="review">Работа над ошибками</a></li>
+      <li><a href="#" data-view="books">Книги PDF</a></li>
+      <li><a href="#" data-view="import">Импорт</a></li>
+      <li><a href="#" data-view="editor">Редактор</a></li>
+      <li><a href="#" data-view="stats">Статистика</a></li>
+    </ul>
+  </nav>
+
+  <main class="container" id="app">
+    <p aria-busy="true">Загрузка…</p>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+services:
+  app:
+    build: .
+    image: app:local
+    ports:
+      - "${WEB_PORT:-2323}:8000"
+    env_file: .env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./inbox:/app/inbox
+      - ./examples:/app/examples
+      - ./books:/app/books
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 25s
+
+  bot:
+    image: app:local
+    entrypoint: ["python", "-m", "bot.main"]
+    env_file: .env
+    environment:
+      API_URL: http://app:8000
+      TZ: Europe/Moscow
+    depends_on:
+      - app
+    restart: unless-stopped
+
+  runner:
+    image: app:local
+    entrypoint: ["python", "-m", "runner.examples_runner"]
+    env_file: .env
+    environment:
+      API_URL: http://app:8000
+      EXAMPLES_DIR: /app/examples
+      RUNNER_POLL_SECONDS: "5"
+    volumes:
+      - ./examples:/app/examples
+    depends_on:
+      - app
+    restart: unless-stopped
+
