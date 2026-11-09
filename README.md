@@ -18,9 +18,8 @@ Stack: FastAPI, SQLAlchemy 2, Alembic, static HTML/JS, aiogram 3. Compose does n
 - [Environment variables](#environment-variables)
 - [Quiz format](#quiz-format)
 - [Where quizzes come from](#where-quizzes-come-from)
-- [Web](#web)
-- [Telegram](#telegram)
-- [Tests](#tests)
+- [How to install it?](#web)
+
 
 
   <img width="1916" height="806" alt="image" src="https://github.com/user-attachments/assets/56e9bc86-6283-4253-bc00-e83d131adf69" />
@@ -156,7 +155,7 @@ EXAMPLES_DIR=./examples API_URL=http://127.0.0.1:2323 IMPORT_TOKEN=change_me \
 
 The site has the quiz list, a run, stats, mistake review, an editor, JSON import, and PDF upload. API calls other than the health check send the `X-Import-Token` header. Correct answers are returned only after the learner answers a question. The editor shows them immediately.
 
-## Telegram
+## Telegram (optional additional module)
 
 The `bot` service is in the same Compose file. Commands: `/start`, `/tests`, `/random`, `/mistakes`, `/stats`, `/continue`, `/stop`, `/import`, `/quiz`, `/remind on|off`, `/book`, `/books`. Answers use inline buttons in the chat.
 
