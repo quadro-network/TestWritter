@@ -6,12 +6,52 @@ You can take a quiz, review stats and mistakes, import a ready JSON file, drop J
 
 Stack: FastAPI, SQLAlchemy 2, Alembic, static HTML/JS, aiogram 3. Compose does not start the database.
 
+
+## Contents
+
+- [Loading the book](#loading-the-book)
+- [A prompt for creating your own test in JSON format on any topic, which can then be imported into an application](#a-prompt-for-creating-your-own-test-in-json-format-on-any-topic-which-can-then-be-imported-into-an-application)
+- [We are reviewing past mistakes and crafting a prompt to continue working with the AI tutor](#we-are-reviewing-past-mistakes-and-crafting-a-prompt-to-continue-working-with-the-ai-tutor)
+- [Working with statistics](#working-with-statistics)
+- [Prerequisites](#prerequisites)
+- [Deploy](#deploy)
+- [Environment variables](#environment-variables)
+- [Quiz format](#quiz-format)
+- [Where quizzes come from](#where-quizzes-come-from)
+- [Web](#web)
+- [Telegram](#telegram)
+- [Tests](#tests)
+
+
+  <img width="1916" height="806" alt="image" src="https://github.com/user-attachments/assets/56e9bc86-6283-4253-bc00-e83d131adf69" />
+
+  <img width="1903" height="824" alt="image" src="https://github.com/user-attachments/assets/ee9dad4b-ee68-45b5-b8e2-bb3391689aed" />
+
+  # Loading the book
+
+<img width="1883" height="882" alt="image" src="https://github.com/user-attachments/assets/0b77cd7c-33ae-478e-9115-5de8e3ec83ce" />
+
+# A prompt for creating your own test in JSON format on any topic, which can then be imported into an application.
+
+<img width="1906" height="858" alt="image" src="https://github.com/user-attachments/assets/7480265e-79ff-4f75-be2e-323581434051" />
+
+# We are reviewing past mistakes and crafting a prompt to continue working with the AI ​​tutor.
+
+<img width="1886" height="886" alt="image" src="https://github.com/user-attachments/assets/675413a7-ecb2-48a4-bd26-e6b436fc110c" />
+
+# Working with statistics
+
+<img width="1896" height="833" alt="image" src="https://github.com/user-attachments/assets/909184d3-567b-4ba0-a39e-953e587d143b" />
+
+
 ## Prerequisites
 
 - Docker and Docker Compose
 - MariaDB or MySQL already running, with an empty database created
 - A Telegram bot token, if you want the bot
 - Ollama on the host with a pulled model, if you want PDF import (any model; checked with `qwen2.5:7b` and `granite 8b`)
+
+
 
 ## Deploy
 
